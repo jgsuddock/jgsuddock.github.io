@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Javascript 2048 Game</title>
+
+		<style type="text/css">
+			body {
+				background-color: #F1F1F1;
+			}
+			h1 {
+				font-size: 3em;
+			}
+			#game {
+				font-family: Arial, Helvetica, sans-serif;
+				width: 400px;
+				margin: auto;
+			}
+			#game h1{
+				text-align: center;
+			}
+			#game p{
+				text-align: right;
+			}
+			#game table {
+				font-weight: bold;
+				color: white;
+				width: 100%;
+				border-collapse: collapse;
+			}
+			#game table, #game tr, #game td {
+				border: 8px solid #885734;
+			}
+			#game td {
+				background-color: #F9EBD1;
+				font-size: 1.2em;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+			}
+			#howtobutton {
+				text-align: center;
+				padding-top: 15px;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div id="game">
+			<h1>2048</h1>
+			<p>Score: <span id="score">0</span></p>
+			<!-- <p>Debug Status: <span id="debug">0</span><p> -->
+			<table>
+				<tr>
+					<td id="item00"></td>
+					<td id="item01"></td>
+					<td id="item02"></td>		
+					<td id="item03"></td>
+				</tr>
+				<tr>
+					<td id="item10"></td>
+					<td id="item11"></td>
+					<td id="item12"></td>		
+					<td id="item13"></td>
+				</tr>
+				<tr>
+					<td id="item20"></td>
+					<td id="item21"></td>
+					<td id="item22"></td>		
+					<td id="item23"></td>
+				</tr>
+				<tr>
+					<td id="item30"></td>
+					<td id="item31"></td>
+					<td id="item32"></td>		
+					<td id="item33"></td>
+				</tr>
+			</table>
+			
+			<div id="howtobutton"><button onclick="myFunction()">How To Play</button></div>
+
+			<script>
+				var myFunction = function() {
+				    alert("How To Play\n\nUse the arrow keys or the I, J, K, and L keys to shift the board in that direction. When two blocks with the same number collide with each other, they combine into a single block of double the value. All tiles will move in the direction you type. The goal of the game is to get to the 2048 tile.\n\nGood Luck!");
+				}
+			</script>
+		</div>
+	</body>
+
+	<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/game2048.js"></script>
+</html>
